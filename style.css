@@ -1,0 +1,57 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+ul{
+    width: 10rem;
+    height: auto;
+    padding: 0;
+}
+
+li{
+    cursor: pointer;
+    list-style-type: none;
+    margin: 0.5rem 0 ;
+    padding: 0 5px;
+    border: 0.5px white solid;
+    border-radius: 10px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    font-size: 1rem;
+    word-wrap: break-word;
+
+}
+.separetor{
+    width: 20rem;
+}
+.btnChecked{
+    background-color: black !important;
+}
+
+#content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.btn{
+    width: 5rem;
+    height: auto;
+    border-radius: 10px;
+    transition: width 0.1s, height 0.3s;
+    background-color: yellow;
+    color: black;
+}
+
+.btn:hover{
+    color: wheat ;
+    background-color: green;
+    cursor: pointer;
+    width: 5.5rem;
+    border-radius: 10px 0 10px 0;
+}

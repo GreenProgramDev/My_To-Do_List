@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <input id="inputNewContent"
-        type="text"
-        placeholder="write here">
+      <div>
+        <input id="inputNewContent" type="text" placeholder="write here" />
         <button class="btn add" id="addNew">Add</button>
-        
-        <div class="containerToDoList" id="newListContet">
-            <h1>My To-Do List</h1>
-            <hr class="separetor">
-            <ul id="toDoList"></ul>
-            <hr class="separetor">
-        </div>
-        
+      </div>
+      <div class="containerToDoList" id="newListContet">
+        <h1>My To-Do List</h1>
+        <h3>Task</h3>
+        <hr class="separetor" />
+        <ul id="toDoList"></ul>
+        <hr class="separetor" />
+        <h3>Done</h3>
+        <hr class="separetor" />
+        <ul id="toDoListChecked"></ul>
+        <hr class="separetor" />
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

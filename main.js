@@ -29,8 +29,6 @@ const formatsTime = (datetime) => {
 
   const timeFormated = `${dateFormated} - ${hoursFormated}`;
 
-  console.log('sidney', timeFormated)
-
   return timeFormated;
 };
 

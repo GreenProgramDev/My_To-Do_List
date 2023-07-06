@@ -4,26 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
 
     <title>Document</title>
   </head>
   <body>
     <div class="container">
-      <div>
-        <input id="inputNewContent" type="text" placeholder="write here" />
+      <div class="creatItem">
+        <div>
+          <input id="inputNewContent" type="text" placeholder="write here" />
+          <input id="timeTask" type="datetime-local">
+        </div>
         <button class="btn add" id="addNew">Add</button>
       </div>
+      <h1>My To-Do List</h1>
       <div class="containerToDoList" id="newListContet">
-        <h1>My To-Do List</h1>
-        <h3>Task</h3>
-        <hr class="separetor" />
-        <ul id="toDoList"></ul>
-        <hr class="separetor" />
-        <h3>Done</h3>
-        <hr class="separetor" />
-        <ul id="toDoListChecked"></ul>
-        <hr class="separetor" />
+        <div>
+          <h3>Task</h3>
+          <hr class="separetor" />
+          <ul class="tab" id="toDoList"></ul>
+          <hr class="separetor" />
+        
+          <!-- <h3>Priority</h3>
+          <hr class="separetor" />
+          <ul class="tab1" id="toDoListPriority"></ul>
+          <hr class="separetor" /> -->
+        </div>
+        <div>
+          <h3>Done</h3>
+          <hr class="separetor" />
+          <ul class="tab2" id="toDoListChecked"></ul>
+          <hr class="separetor" />
+        </div>
       </div>
     </div>
     <script src="main.js"></script>

@@ -5,7 +5,34 @@ const inputNewContent = document.getElementById("inputNewContent");
 
 //get content(value) from date and time from the exectution
 const formatTime = document.getElementById("timeTask");
+let formatted
+formatTime.addEventListener("change", () => {
+  const formattedTime = formatsTime(formatTime.value);
+  formattedDate = formattedTime;
+});
 
+const formatsTime = (datetime) => {
+  const dateObj = new Date(datetime); 
+
+  const dia = dateObj.getDate();
+  const mes = dateObj.getMonth() + 1;
+
+  const hora = dateObj.getHours();
+  const minutos = dateObj.getMinutes();
+  
+  const dateFormated = `${dia
+    .toString()
+    .padStart(2, "0")}/${mes.toString().padStart(2, "0")}`;
+  const hoursFormated = `${hora
+    .toString()
+    .padStart(2, "0")}:${minutos.toString().padStart(2, "0")}`;
+
+  const timeFormated = `${dateFormated} - ${hoursFormated}`;
+
+  console.log('sidney', timeFormated)
+
+  return timeFormated;
+};
 
 //get button and add event click
 const addNew = document.getElementById("addNew");
@@ -31,10 +58,9 @@ addNew.addEventListener("click", () => {
     newItem.textContent = listItem;
     newItem.setAttribute("for", "forChecked");
 
-    const itemTime = document.createElement("input");
+    const itemTime = document.createElement("li");
     itemTime.classList.add("inputTime");
-    itemTime.type = "datetime-local";
-    itemTime.value = timeValue;
+    itemTime.textContent = formattedDate;
 
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -42,6 +68,12 @@ addNew.addEventListener("click", () => {
     checkbox.id = "forChecked";
 
     const remove = document.createElement("button");
+
+    //icon trash of the input checked remove
+    const icon = document.createElement("i");
+    icon.classList.add("fa-solid", "fa-trash-can");
+    remove.appendChild(icon);
+
     // remove.textContent = "Remove";
     remove.classList.add("btnRemove");
     remove.addEventListener("click", () => {
@@ -50,10 +82,6 @@ addNew.addEventListener("click", () => {
       remove.remove();
       containerItem.remove();
     });
-    //icon trash of the input checked remove
-    const icon = document.createElement("i");
-    icon.classList.add("fa-solid", "fa-trash-can");
-    remove.appendChild(icon);
     //container that wrap all elements for styled
     const containerItem = document.createElement("div");
     containerItem.classList.add("containerItem");
@@ -66,7 +94,9 @@ addNew.addEventListener("click", () => {
     containerItem.appendChild(checkbox);
     //add button delete inside of the newItem
     containerItem.appendChild(remove);
+
     toDoList.appendChild(containerItem);
+
     inputNewContent.value = "";
     timeTask.value = "";
   }

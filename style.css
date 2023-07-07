@@ -49,9 +49,12 @@ li {
   display: flex;
   cursor: pointer;
 }
+
 .itemLi {
   overflow: hidden;
   text-overflow: ellipsis;
+  text-transform: capitalize;
+
 }
 .leftContainer, .rigthContainer{
   display: flex;

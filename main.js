@@ -106,7 +106,7 @@ addNew.addEventListener("click", () => {
   const checkboxes = document.querySelectorAll("input[type=checkbox]");
   checkboxes.forEach((checkbox) => {
     checkbox.addEventListener("change", () => {
-      const li = checkbox.parentElement
+      const li = checkbox.closest(".itemContainer")
       if (checkbox.checked) {
         li.style.backgroundColor = "greenyellow";
         li.style.textDecoration = "line-through";

@@ -4,9 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
-
     <title>Document</title>
   </head>
   <body>
@@ -14,18 +19,25 @@
       <section class="header">
         <div>
           <h1>Bom dia, Alice!</h1>
-          <p>Já olhou suas tarefas?<br>
-            Vamos adicionou alguma<br> nova tarefa hoje?
+          <p>
+            Já olhou suas tarefas?<br />
+            Vamos adicionou alguma<br />
+            nova tarefa hoje?
           </p>
         </div>
-        <img class="imgs" src="public/image 7.png" alt="">
+        <img class="imgs" src="public/image 7.png" alt="" />
       </section>
-      
+
       <section class="creatTask">
         <h4>New Task</h4>
-        <input class="inputTask" id="inputNewContent" type="text" placeholder="write here" />
+        <input
+          class="inputTask"
+          id="inputNewContent"
+          type="text"
+          placeholder="write here"
+        />
         <div class="positionBtn">
-          <input class="inputDate" id="timeTask" type="datetime-local">
+          <input class="inputDate" id="timeTask" type="datetime-local" />
           <button class="btn add" id="addNew">Add</button>
         </div>
       </section>
@@ -36,14 +48,13 @@
           <ul class="tab" id="toDoList"></ul>
         </div>
       </section>
-      
+
       <section class="done">
         <h5 class="subtitle">Done</h5>
         <div class="contentDone">
           <ul class="tab2" id="toDoListChecked"></ul>
         </div>
       </section>
-
     </div>
     <script src="main.js"></script>
   </body>

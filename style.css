@@ -10,11 +10,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #FFCDD9;
 }
 .container {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(168deg, rgba(255, 255, 255, 0.36) 0%, rgba(255, 255, 255, 0.00) 100%);
 }
 .header {
   display: flex;

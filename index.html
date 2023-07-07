@@ -11,33 +11,39 @@
   </head>
   <body>
     <div class="container">
-      <div class="creatItem">
+      <section class="header">
         <div>
-          <input id="inputNewContent" type="text" placeholder="write here" />
-          <input id="timeTask" type="datetime-local">
+          <h1>Bom dia, Alice!</h1>
+          <p>Já olhou suas tarefas?<br>
+            Vamos adicionou alguma<br> nova tarefa hoje?
+          </p>
         </div>
-        <button class="btn add" id="addNew">Add</button>
-      </div>
-      <h1>My To-Do List</h1>
-      <div class="containerToDoList" id="newListContet">
-        <div>
-          <h3>Task</h3>
-          <hr class="separetor" />
+        <img class="imgs" src="public/image 7.png" alt="">
+      </section>
+      
+      <section class="creatTask">
+        <h4>New Task</h4>
+        <input class="inputTask" id="inputNewContent" type="text" placeholder="write here" />
+        <div class="positionBtn">
+          <input class="inputDate" id="timeTask" type="datetime-local">
+          <button class="btn add" id="addNew">Add</button>
+        </div>
+      </section>
+
+      <section class="task" id="newListContet">
+        <h5 class="subtitle">Task</h5>
+        <div class="contentTask">
           <ul class="tab" id="toDoList"></ul>
-          <hr class="separetor" />
-        
-          <!-- <h3>Priority</h3>
-          <hr class="separetor" />
-          <ul class="tab1" id="toDoListPriority"></ul>
-          <hr class="separetor" /> -->
         </div>
-        <div>
-          <h3>Done</h3>
-          <hr class="separetor" />
+      </section>
+      
+      <section class="done">
+        <h5 class="subtitle">Done</h5>
+        <div class="contentDone">
           <ul class="tab2" id="toDoListChecked"></ul>
-          <hr class="separetor" />
         </div>
-      </div>
+      </section>
+
     </div>
     <script src="main.js"></script>
   </body>

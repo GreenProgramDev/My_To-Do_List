@@ -10,26 +10,26 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
-  background-color: #FFCDD9;
+  background-color: #ffcdd9;
 }
 .container {
   display: grid;
 }
 .headers {
   display: grid;
-  grid-template-areas: 
-  "h1 img"
-  "p img"
-  "... img";
+  grid-template-areas:
+    "h1 img"
+    "p img"
+    "... img";
 }
 .headers h1 {
-  grid-area: h1 ;
+  grid-area: h1;
 }
 .headers p {
   grid-area: p;
 }
 .headers img {
-  grid-area: img ;
+  grid-area: img;
   height: 7rem;
   mix-blend-mode: multiply;
   flex-shrink: 0;
@@ -88,31 +88,35 @@ li {
   padding: 0.4rem;
   grid-gap: 0.5rem;
   grid-template-columns: 2fr 0.5fr;
-  grid-template-areas: 
-  "text check"
-  "date trash";
+  grid-template-areas:
+    "text check"
+    "date trash";
   border-radius: 5px;
-  background: linear-gradient(270deg, #F597CA 0%, rgba(255, 255, 255, 0.80) 100%);
+  background: linear-gradient(
+    270deg,
+    #f597ca 0%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
 }
 .btnRemove {
   border: none;
   cursor: pointer;
   background-color: transparent;
 }
-.creatTask{
+.creatTask {
   display: grid;
   grid-gap: 0.5rem;
   grid-template-rows: 10px 53px 53px;
   grid-template-columns: 3.5fr 1fr;
   grid-template-areas:
-  "tex tex"
-  "inp inp"
-  "dat bt";
+    "tex tex"
+    "inp inp"
+    "dat bt";
 }
 .inputTask {
   grid-area: inp;
 }
-.creatTask h4{
+.creatTask h4 {
   grid-area: tex;
 }
 .btn {

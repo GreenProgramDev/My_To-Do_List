@@ -1,16 +1,11 @@
-// ---------Code Constants---------->>>>>>
-
-//get content(value) from input
 const inputNewContent = document.getElementById("inputNewContent");
 
-//get content(value) from date and time from the exectution
 const formatTime = document.getElementById("timeTask");
 let formatted;
 formatTime.addEventListener("change", () => {
   const formattedTime = formatsTime(formatTime.value);
   formattedDate = formattedTime;
 });
-
 const formatsTime = (datetime) => {
   const dateObj = new Date(datetime);
 
@@ -31,22 +26,15 @@ const formatsTime = (datetime) => {
 
   return timeFormated;
 };
-//get button and add event click
-const addNew = document.getElementById("addNew");
-//get UL that receive new LI(listItem)
-const toDoList = document.getElementById("toDoList");
 
+const addNew = document.getElementById("addNew");
+const toDoList = document.getElementById("toDoList");
 const toDoListChecked = document.getElementById("toDoListChecked");
 
 addNew.addEventListener("click", () => {
-  //receiving content of the value from #inputNewContent
   const listItem = inputNewContent.value.trim();
-  //listItem now it has of the new value
-
-  const timeValue = formatTime.value.trim();
 
   if (listItem !== "") {
-    //create new element li inside UL#toDoList
     const newItem = document.createElement("li");
     newItem.classList.add("itemLi");
     newItem.textContent = listItem;
@@ -58,7 +46,6 @@ addNew.addEventListener("click", () => {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("btnChecked");
-    // checkbox.id = "forChecked";
 
     const remove = document.createElement("button");
     const icon = document.createElement("i");
@@ -71,30 +58,16 @@ addNew.addEventListener("click", () => {
       remove.remove();
       containerItem.remove();
     });
-    //container that wrap all elements for styled
-    const containerRight = document.createElement("div");
-    containerRight.classList.add("rightContainer");
-
-    const containerLeft = document.createElement("div");
-    containerLeft.classList.add("leftContainer");
 
     const containerItem = document.createElement("div");
     containerItem.classList.add("itemContainer");
 
-    //add the newItem inside of the containerItem
-    containerLeft.appendChild(newItem);
-    //add datetime inside of the containerItem
-    containerLeft.appendChild(itemTime);
-    //add input checkbox inside of the containerItem
-    containerRight.appendChild(checkbox);
-    //add button remove inside of the containerItem
-    containerRight.appendChild(remove);
-    containerItem.appendChild(containerLeft);
-    containerItem.appendChild(containerRight);
+    containerItem.appendChild(newItem);
+    containerItem.appendChild(checkbox);
+    containerItem.appendChild(itemTime);
+    containerItem.appendChild(remove);
 
-    //add all element inside of the containerItem for toDoList
     toDoList.appendChild(containerItem);
-
     inputNewContent.value = "";
     timeTask.value = "";
   }
